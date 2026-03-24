@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gautam Kumar | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">PORT<span>FOLIO.</span></div>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li class="active"><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Edu & Exp</a></li>
+    <li><a href="#achievements">Achievements </a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#cv">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- Hero Section -->
+<section id="hero">
+  <div id="particles-js"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Hi,<br>I'm <span>Gautam</span><br>Building Insights with Data & Intelligence</h1>
+      <button><a href="#contact">Contact</a></button>
+      <button onclick="downloadCV()">Download CV</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/profile.png" alt="Profile">
+    </div>
+  </div>
+</section>
+<!-- About Section -->
+<section id="about">
+  <div class="about-container">
+    
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I’m Gautam Kumar, a Data Science Enthusiast with strong problem-solving skills and hands-on experience in data analysis and 
+        visualization using Python. I transform raw data into meaningful insights to drive better decisions.
+      </p>
+    </div>
+
+    <div class="about-stats">
+      <div class="stat-card">
+        <h3>5+</h3>
+        <p>Projects</p>
+      </div>
+      <div class="stat-card">
+        <h3>150+</h3>
+        <p>DSA Problems</p>
+      </div>
+      <div class="stat-card">
+        <h3>5+</h3>
+        <p>Certifications</p>
+      </div>
+      <div class="stat-card">
+        <h3>3+</h3>
+        <p>Years Learning</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-categories">
+    <!-- Programming Languages -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <i class="fas fa-code"></i> Programming Languages
+      </h3>
+      <div class="category-skills">
+        <div class="skill-card">Java</div>
+        <div class="skill-card">C++</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">C</div>
+      </div>
+    </div>
+
+    <!-- Web Development -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <i class="fas fa-globe"></i> Web Development
+      </h3>
+      <div class="category-skills">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">React.js</div>
+        <div class="skill-card">Node.js</div>
+        <div class="skill-card">Express.js</div>
+      </div>
+    </div>
+
+    <!-- Databases -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <i class="fas fa-database"></i> Databases
+      </h3>
+      <div class="category-skills">
+        <div class="skill-card">MySQL</div>
+        <div class="skill-card">MongoDB</div>
+        <div class="skill-card">DBMS</div>
+      </div>
+    </div>
+
+    <!-- Data & Analytics -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <i class="fas fa-chart-pie"></i> Data & Analytics
+      </h3>
+      <div class="category-skills">
+        <div class="skill-card">Power BI</div>
+        <div class="skill-card">Excel</div>
+        <div class="skill-card">Data Science</div>
+        <div class="skill-card">AI/ML</div>
+      </div>
+    </div>
+
+    <!-- Tools & Version Control -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <i class="fas fa-tools"></i> Tools & Version Control
+      </h3>
+      <div class="category-skills">
+        <div class="skill-card">Git</div>
+        <div class="skill-card">GitHub</div>
+      </div>
+    </div>
+
+    <!-- DevOps & Infrastructure -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <i class="fas fa-server"></i> DevOps & Infrastructure
+      </h3>
+      <div class="category-skills">
+        <div class="skill-card">Linux</div>
+        <div class="skill-card">DevOps</div>
+        <div class="skill-card">Cloud Computing</div>
+      </div>
+    </div>
+
+    <!-- Computer Science -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <i class="fas fa-brain"></i> Computer Science
+      </h3>
+      <div class="category-skills">
+        <div class="skill-card">DSA</div>
+        <div class="skill-card">Computer Networks</div>
+        <div class="skill-card">Operating Systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Projects Section -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="assets/Task-manager.png" alt="Project">
+      <div class="project-content">
+        <h3>Student Task Manager</h3>
+        <p>A full-stack web application for managing students’ daily tasks with real-time tracking.</p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Roygautam8852/Student_Task_Manager">GitHub</a>
+          <a href="https://stmdashboard.netlify.app/">Live</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/Stock.png" alt="Project">
+      <div class="project-content">
+        <h3>Stock-Chat-Ai</h3>
+        <p>Real-time stock tracking application with charts and AI insights.</p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Chart.js</span>
+          <span>API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Roygautam8852/Stock-Chat-Ai" target="_blank">GitHub</a>
+          <a href="https://roygautam8852.github.io/Stock-Chat-Ai/" target="_blank">Live</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/insurance.png" alt="Project">
+      <div class="project-content">
+        <h3>Insurance-Risk-And-Claims-Analysis-Dashboard</h3>
+        <p>An interactive Power BI dashboard for analyzing insurance risk factors and claims patterns.</p>
+        <div class="tech-stack">
+          <span>Power BI</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Roygautam8852/Insurance-Riska-And-Claims-Analysis-Dashboard" target="_blank">GitHub</a>
+          <a href="https://app.powerbi.com/links/DuoEmuCDRm?ctid=e14e73eb-5251-4388-8d67-8f9f2e2d5a46&pbi_source=linkShare" target="_blank">Live</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/SyncSpace.png" alt="Project">
+      <div class="project-content">
+        <h3>SyncSpace</h3>
+        <p>Add your project description here. Explain what the project does and the problem it solves.</p>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>Express.js</span>
+          <span>API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Roygautam8852/SyncSpace" target="_blank">GitHub</a>
+          <a href="https://syncspace-d865.onrender.com/" target="_blank">Live</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/SecretDiary.png" alt="Project">
+      <div class="project-content">
+        <h3>Secret Diary</h3>
+        <p>Add your project description here. Explain what the project does and the problem it solves.</p>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>Express.js</span>
+          <span>Other Tech</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Roygautam8852/SecretDiary" target="_blank">GitHub</a>
+          <a href="https://secretdiary-backend.onrender.com/" target="_blank">Live</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/Ecommerce.png" alt="Project">
+      <div class="project-content">
+        <h3>E-commerce Issue Tracker</h3>
+        <p>Add your project description here. Explain what the project does and the problem it solves.</p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Roygautam8852/Ecommerce-Complaint-tracker" target="_blank">GitHub</a>
+          <a href="https://ecommerce-issue-tracker.onrender.com/" target="_blank">Live</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Education & Experience Section -->
+<section id="education">
+  <h2 class="section-title">Education & Experience</h2>
+
+  <div class="education-container">
+    <!-- Education Column -->
+    <div class="education-column">
+      <h3 class="education-column-title">
+        <i class="fas fa-graduation-cap"></i> Education
+      </h3>
+
+      <div class="education-card">
+        <div class="education-header">
+          <h4>B.Tech in Computer Science</h4>
+          <span class="education-date">2023 – Present</span>
+        </div>
+        <p class="education-institution">Lovely Professional University (LPU)</p>
+        <p class="education-description">
+          Actively studying core computer science subjects such as DSA, OS, DBMS, Web Development, Data Science, and DevOps, with a strong emphasis on real-world, hands-on projects.
+        </p>
+        <div class="education-meta">
+          <span class="education-badge">Ongoing</span>
+        </div>
+      </div>
+
+      <div class="education-card">
+        <div class="education-header">
+          <h4>12th Class (PCM)</h4>
+          <span class="education-date">2020 - 2022</span>
+        </div>
+        <p class="education-institution">Senior Secondary School</p>
+        <p class="education-description">
+          Completed senior secondary education with Physics, Chemistry, and Mathematics (PCM) stream. Strong foundation in science concepts and problem-solving skills developed during high school years.
+        </p>
+        <div class="education-meta">
+          <span class="education-badge">Completed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Column -->
+    <div class="education-column">
+      <h3 class="education-column-title">
+        <i class="fas fa-briefcase"></i> Experience & Training
+      </h3>
+
+      <div class="education-card">
+        <div class="education-header">
+          <h4>Data Science & Machine Learning</h4>
+          <span class="education-date">Ongoing</span>
+        </div>
+        <p class="education-institution">Lovely Professional University (LPU)</p>
+        <p class="education-description">
+          Worked on data-driven projects including data preprocessing, analysis, visualization, and basic machine 
+          learning using Python to solve real-world problems.
+        </p>
+        <div class="education-meta">
+          <span class="education-badge">In Progress</span>
+        </div>
+      </div>
+
+      <div class="education-card">
+        <div class="education-header">
+          <h4>Data Structures & Algorithms Practice</h4>
+          <span class="education-date">Ongoing</span>
+        </div>
+        <p class="education-institution">LeetCode & Other Platforms</p>
+        <p class="education-description">
+          Solved 150+ DSA problems, improving problem-solving efficiency, algorithmic thinking, and optimization skills. Regular practice on competitive coding platforms.
+        </p>
+        <div class="education-meta">
+          <span class="education-badge">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements">
+  <h2 class="section-title">Achievements</h2>
+
+  <div class="achievements-grid">
+
+    <div class="achievement-card">
+      <div class="achievement-icon-box">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <div class="achievement-content">
+        <span class="achievement-category">Coding</span>
+        <h3 class="achievement-title">Solved 150+ DSA Problems</h3>
+        <p class="achievement-desc">Consistently solved complex data structures and algorithms problems on LeetCode, improving problem-solving efficiency.</p>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <div class="achievement-icon-box">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="achievement-content">
+        <span class="achievement-category">Development</span>
+        <h3 class="achievement-title">Built 5+ Full-Stack Projects</h3>
+        <p class="achievement-desc">Developed multiple real-world web applications from concept to deployment using modern tech stacks.</p>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <div class="achievement-icon-box">
+        <i class="fas fa-chart-bar"></i>
+      </div>
+      <div class="achievement-content">
+        <span class="achievement-category">Data Analytics</span>
+        <h3 class="achievement-title">Power BI Dashboard Expert</h3>
+        <p class="achievement-desc">Created interactive data visualization dashboards analyzing complex datasets for business intelligence.</p>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <div class="achievement-icon-box">
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="achievement-content">
+        <span class="achievement-category">Learning</span>
+        <h3 class="achievement-title">Continuous Learner</h3>
+        <p class="achievement-desc">Completed 5+ certifications and actively learning full stack development, data science, and DevOps.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="certifications-grid">
+
+    <div class="certification-card" onclick="openCertificateModal('Introduction to Hardware and Operating Systems', 'assets/Introduction to Hardware and Operating Systems.pdf')">
+      <div class="cert-icon-box">
+        <i class="fas fa-microchip"></i>
+      </div>
+      <div class="cert-content">
+        <span class="cert-issuer">IBM & COURSERA</span>
+        <h3 class="cert-title">Introduction to Hardware and Operating Systems</h3>
+        <p class="cert-date">SEP 2024</p>
+      </div>
+    </div>
+
+    <div class="certification-card" onclick="openCertificateModal('Cloud Computing', 'assets/NPTEL.png')">
+      <div class="cert-icon-box">
+        <i class="fas fa-cloud"></i>
+      </div>
+      <div class="cert-content">
+        <span class="cert-issuer">NPTEL</span>
+        <h3 class="cert-title">Cloud Computing</h3>
+        <p class="cert-date">JAN-APR 2025</p>
+      </div>
+    </div>
+
+    <div class="certification-card" onclick="openCertificateModal('The Bits and Bytes of Computer Networking', 'assets/The Bits and Bytes of Computer Networking.pdf')">
+      <div class="cert-icon-box">
+        <i class="fas fa-network-wired"></i>
+      </div>
+      <div class="cert-content">
+        <span class="cert-issuer">GOOGLE & COURSERA</span>
+        <h3 class="cert-title">The Bits and Bytes of Computer Networking</h3>
+        <p class="cert-date">SEP 2024</p>
+      </div>
+    </div>
+
+    <div class="certification-card" onclick="openCertificateModal('Legacy Responsive Web Design V8', 'assets/freeCodeCamp.png')">
+      <div class="cert-icon-box">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="cert-content">
+        <span class="cert-issuer">FREEODECAMP</span>
+        <h3 class="cert-title">Legacy Responsive Web Design V8</h3>
+        <p class="cert-date">OCT 2023</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CV Section -->
+<section id="cv">
+  <div class="cv-container">
+    <div class="cv-header">
+      <h2>Resume</h2>
+      <div class="cv-buttons">
+        <button class="cv-view-btn" onclick="openCVModal()">
+          <i class="fas fa-eye"></i> View Resume
+        </button>
+        <button class="cv-download-btn" onclick="downloadCV()">
+          <i class="fas fa-download"></i> Download Resume
+        </button>
+      </div>
+    </div>
+
+    <div class="cv-content">
+      <!-- Profile Section -->
+      <div class="cv-section cv-profile">
+        <div class="cv-profile-left">
+          <img src="assets/profile.png" alt="Profile">
+        </div>
+        <div class="cv-profile-right">
+          <h1>GAUTAM KUMAR</h1>
+          <p class="cv-title">Aspiring Full Stack Developer & Data Scientist</p>
+          <div class="cv-contact-info">
+            <div class="cv-contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:gautamkumar80004@gmail.com">gautamkumar80004@gmail.com</a>
+            </div>
+            <div class="cv-contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+918252881195">+91 82528 81195</a>
+            </div>
+            <div class="cv-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Punjab, India</span>
+            </div>
+            <div class="cv-contact-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Roygautam8852">github.com/Roygautam8852</a>
+            </div>
+            <div class="cv-contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/gautam-kumar-roy/">LinkedIn Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Summary -->
+      <div class="cv-section">
+        <h3 class="cv-section-title">Professional Summary</h3>
+        <p>
+          Data Science Enthusiast with strong analytical and problem-solving skills, and hands-on experience in data analysis, visualization, and basic machine learning using Python. Proficient in DSA with 150+ problems solved. 
+          Experienced in working with Pandas, NumPy, and Matplotlib to transform raw data into actionable insights.
+        </p>
+      </div>
+
+      <!-- Education -->
+      <div class="cv-section">
+        <h3 class="cv-section-title">Education</h3>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h4>B.Tech in Computer Science</h4>
+            <span class="cv-date">2023 – Present</span>
+          </div>
+          <p class="cv-institution">Lovely Professional University (LPU), Punjab</p>
+          <p class="cv-description">
+            Actively studying core computer science subjects such as DSA, OS, DBMS, Web Development, 
+            Data Science, and DevOps, with a strong emphasis on real-world, hands-on projects.
+          </p>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="cv-section">
+        <h3 class="cv-section-title">Experience & Training</h3>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h4>End-to-End Training in Full Stack Engineering, Data Science, and DevOps</h4>
+            <span class="cv-date">2023 - 2025</span>
+          </div>
+          <p class="cv-institution">Self & Online Platforms</p>
+          <p class="cv-description">
+            Developed multiple full-stack applications using HTML, CSS, JavaScript with data-driven insights 
+            and DevOps-oriented deployment workflows. Built expertise in modern web development frameworks and data visualization tools.
+          </p>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h4>Data Structures & Algorithms Practice</h4>
+            <span class="cv-date">Ongoing</span>
+          </div>
+          <p class="cv-institution">LeetCode & Other Platforms</p>
+          <p class="cv-description">
+            Solved 150+ DSA problems, improving problem-solving efficiency, algorithmic thinking, 
+            and optimization skills. Regular practice on competitive coding platforms.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="cv-section">
+        <h3 class="cv-section-title">Technical Skills</h3>
+        <div class="cv-skills">
+          <div class="cv-skill-category">
+            <h5>Programming Languages</h5>
+            <p>Java, C++, JavaScript, Python, C</p>
+          </div>
+          <div class="cv-skill-category">
+            <h5>Web Development</h5>
+            <p>HTML, CSS, JavaScript, React, Node.js, MongoDB, MySQL</p>
+          </div>
+          <div class="cv-skill-category">
+            <h5>Data & Analytics</h5>
+            <p>Python, Data Science, Power BI, Excel, AI/ML Basics</p>
+          </div>
+          <div class="cv-skill-category">
+            <h5>Tools & Technologies</h5>
+            <p>Git, GitHub, Linux, DevOps, Cloud Computing, DBMS, Operating Systems</p>
+          </div>
+          <div class="cv-skill-category">
+            <h5>Other Skills</h5>
+            <p>Computer Networks, Problem Solving, DSA, Team Collaboration</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h4>Insurance Risk & Claims Analysis Dashboard</h4>
+            <span class="cv-date">2024</span>
+          </div>
+          <p class="cv-description">
+            Interactive Power BI dashboard analyzing insurance risk factors and claims patterns. 
+            Comprehensive data modeling and visualization for business intelligence. 
+            <a href="https://github.com/Roygautam8852/Insurance-Riska-And-Claims-Analysis-Dashboard" target="_blank">GitHub</a> | 
+            <a href="https://app.powerbi.com/links/DuoEmuCDRm?ctid=e14e73eb-5251-4388-8d67-8f9f2e2d5a46&pbi_source=linkShare" target="_blank">Live Demo</a>
+          </p>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h4>SyncSpace</h4>
+            <span class="cv-date">2026</span>
+          </div>
+          <p class="cv-description">
+            Real-time collaborative whiteboard platform supporting multi-user drawing and live interaction using Socket.io. 
+            Engineered secure authentication with JWT and Google OAuth for role-based access control. 
+            <a href="https://github.com/Roygautam8852/SyncSpace" target="_blank">GitHub</a> | 
+            <a href="https://syncspace-d865.onrender.com/" target="_blank">Live Demo</a>
+          </p>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <h4>Secret Diary</h4>
+            <span class="cv-date">2026</span>
+          </div>
+          <p class="cv-description">
+            Full-stack anonymous confession platform with Google OAuth authentication and complete user anonymity. 
+            Implemented secure secret code system using bcrypt hashing for enhanced data privacy and protection. 
+            <a href="https://github.com/Roygautam8852/SecretDiary" target="_blank">GitHub</a> | 
+            <a href="https://secretdiary-backend.onrender.com/" target="_blank">Live Demo</a>
+          </p>
+        </div>
+
+
+      <!-- Achievements -->
+      <div class="cv-section">
+        <h3 class="cv-section-title">Achievements & Certifications</h3>
+        <ul class="cv-list">
+          <li>Solved 150+ Data Structures & Algorithms problems on LeetCode</li>
+          <li>Completed 5+ professional certifications in Full Stack, Data Science, and DevOps</li>
+          <li>Built and deployed 5+ full-stack web applications</li>
+          <li>Created interactive Power BI dashboards for data-driven insights</li>
+          <li>Continuously learning and improving skills in emerging technologies</li>
+        </ul>
+      </div>
+
+      <!-- Certifications List -->
+      <div class="cv-section">
+        <h3 class="cv-section-title">Certifications</h3>
+        <div class="cv-certifications">
+          <div class="cv-cert-item">
+            <h5>Introduction to Hardware and Operating Systems</h5>
+            <span class="cv-cert-year">2024</span>
+          </div>
+          <div class="cv-cert-item">
+            <h5>Cloud Computing</h5>
+            <span class="cv-cert-year">2025</span>
+          </div>
+          <div class="cv-cert-item">
+            <h5>The Bits and Bytes of Computer Networking</h5>
+            <span class="cv-cert-year">2024</span>
+          </div>
+          <div class="cv-cert-item">
+            <h5>Legacy Responsive Web Design V8</h5>
+            <span class="cv-cert-year">2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2 class="section-title">Contact Me</h2>
+
+  <div class="contact-container">
+    
+    <div class="contact-info">
+      <h3>Let’s work together</h3>
+      <p>If you have a project, idea or opportunity — feel free to reach out.</p>
+
+      <div class="contact-item">
+        <span>Email:</span>
+        <a href="mailto:gautamkumar80004@gmail.com">gautamkumar80004@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <span>Phone:</span>
+        <a href="tel:+918252881195">+91 82528 81195</a>
+      </div>
+
+      <div class="contact-item">
+        <span>Location:</span>
+        <p>Punjab, India</p>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/Roygautam8852" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/gautam-kumar-roy/" target="_blank">LinkedIn</a>
+        <a href="https://leetcode.com/u/gautamkumar80004/" target="_blank">LeetCode</a>
+        <a href="https://wa.me/918252881195" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+<!-- Footer -->
+<footer id="footer">
+  <div class="footer-container">
+
+    <p>© 2025 Gautam Kumar. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="https://github.com/Roygautam8852" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/gautam-kumar-roy/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://leetcode.com/u/gautamkumar80004/" aria-label="LeetCode"><img src="assets/leetcode.png" alt="LeetCode" class="leetcode-icon"></a>
+      <a href="https://wa.me/918252881195" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Certificate Modal -->
+<div id="certificateModal" class="cert-modal">
+  <div class="cert-modal-content">
+    <span class="cert-modal-close" onclick="closeCertificateModal()">×</span>
+    <h2 id="certModalTitle">Certificate</h2>
+    <div id="certModalBody" class="cert-modal-body">
+      <p style="text-align: center; color: #9ca3af;">Loading certificate...</p>
+    </div>
+  </div>
+</div>
+
+<!-- CV Modal -->
+<div id="cvModal" class="cv-modal">
+  <div class="cv-modal-content">
+    <span class="cv-modal-close" onclick="closeCVModal()">×</span>
+    <h2>Resume</h2>
+    <div class="cv-modal-body">
+      <iframe id="cvFrame" src="assets/General_CV.pdf" style="width: 100%; height: 100%; border: none; border-radius: 0 0 16px 16px;"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
