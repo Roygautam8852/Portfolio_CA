@@ -47,7 +47,8 @@ body {
 .navbar li {
   cursor: pointer;
   opacity: 1;
-  
+  padding: 0;
+  border: none;
 }
 
 .navbar li.active a {
@@ -69,25 +70,30 @@ body {
   color: #06B6D4;       
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu - Modern Design */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   z-index: 101;
+  width: 30px;
+  height: 24px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  margin: 5px 0;
-  transition: all 0.3s ease;
-  border-radius: 2px;
+  width: 100%;
+  height: 2.5px;
+  background: linear-gradient(90deg, #06B6D4, #22d3ee);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 3px;
+  display: block;
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(8px, 8px);
+  background: linear-gradient(90deg, #ef4444, #f87171);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -95,13 +101,47 @@ body {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(10px, -10px);
+  transform: rotate(-45deg) translate(7.5px, -7.5px);
+  background: linear-gradient(90deg, #ef4444, #f87171);
 }
 
+.hamburger:hover span {
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+/* Default: Desktop navbar */
 .nav-menu {
-  display: flex;
+  display: flex !important;
   list-style: none;
-  gap: 30px;
+  gap: 30px;  
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  padding: 0 !important;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  flex-direction: row !important;
+  border: none !important;
+  overflow: visible !important;
+  z-index: 98;
+  margin: 0 !important;
+  visibility: visible !important;
+}
+
+.nav-menu li {
+  padding: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+  animation: none !important;
+  visibility: visible !important;
+}
+
+.nav-menu.active {
+  left: auto !important;
+  top: auto !important;
 }
 
 .logo {
@@ -129,8 +169,10 @@ body {
   z-index: 10;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   height: 100%;
-  padding: 0 80px;
+  padding: 70px 80px 0 80px;
+  margin-top: 0;
 }
 
 .hero-text {
@@ -1632,15 +1674,71 @@ section.show .section-title {
 @media (max-width: 1024px) {
 
   .hamburger {
-    display: none;
+    display: flex !important;
   }
 
   .nav-menu {
-    display: flex;
+    display: flex !important;
+    position: fixed !important;
+    left: -280px !important;
+    top: 0 !important;
+    flex-direction: column !important;
+    background: rgba(11, 17, 32, 0.98) !important;
+    width: 280px !important;
+    height: 100vh !important;
+    text-align: center;
+    transition: left 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    padding-top: 100px;
+    border-top: 1px solid #1f2937;
+    border-right: 1px solid #1f2937;
+    z-index: 99;
+    gap: 0 !important;
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    left: 0 !important;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-menu li {
+    padding: 20px 0 !important;
+    border-bottom: 1px solid #1f2937 !important;
+    animation: slideIn 0.4s ease-out forwards;
+  }
+
+  .nav-menu.active li {
+    animation: slideIn 0.4s ease-out forwards;
+  }
+
+  .nav-menu:not(.active) li {
+    animation: none;
+  }
+
+  .nav-menu li:nth-child(1) { animation-delay: 0.05s; }
+  .nav-menu li:nth-child(2) { animation-delay: 0.1s; }
+  .nav-menu li:nth-child(3) { animation-delay: 0.15s; }
+  .nav-menu li:nth-child(4) { animation-delay: 0.2s; }
+  .nav-menu li:nth-child(5) { animation-delay: 0.25s; }
+  .nav-menu li:nth-child(6) { animation-delay: 0.3s; }
+  .nav-menu li:nth-child(7) { animation-delay: 0.35s; }
+  .nav-menu li:nth-child(8) { animation-delay: 0.4s; }
+  .nav-menu li:nth-child(9) { animation-delay: 0.45s; }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   .hero-content {
     padding: 0 40px;
+    margin-top: 0;
   }
 
   .about-container,
