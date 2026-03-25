@@ -46,6 +46,14 @@ navLinks.forEach(link => {
   });
 });
 
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.hamburger') && !e.target.closest('.nav-menu')) {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  }
+});
+
 // Close menu when scrolling
 window.addEventListener('scroll', () => {
   hamburger.classList.remove('active');
