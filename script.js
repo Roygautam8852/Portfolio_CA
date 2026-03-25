@@ -189,3 +189,33 @@ function closeCVModal() {
   modal.classList.remove('show');
   document.body.style.overflow = 'auto';
 }
+
+// ================= SCROLL REVEAL ANIMATION =================
+// Production-level smooth scroll reveal with staggered animations
+document.addEventListener('DOMContentLoaded', function() {
+  const revealSections = document.querySelectorAll('section');
+
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add show class with requestAnimationFrame for smooth performance
+        requestAnimationFrame(() => {
+          entry.target.classList.add('show');
+        });
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections
+  revealSections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+});
+// ============================================================

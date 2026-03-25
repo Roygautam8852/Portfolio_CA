@@ -180,6 +180,7 @@ body {
   height: 370px;
   object-fit: contain;
   border-radius: 48px;
+  transform: translate(30px, 20px);
 }
 /* About Section */
 #about {
@@ -316,7 +317,7 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  gap: 25px;
 }
 
 .project-card {
@@ -334,44 +335,67 @@ body {
 
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: 160px;
   object-fit: cover;
 }
 
 .project-content {
-  padding: 25px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 280px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.project-content::-webkit-scrollbar {
+  display: none;
 }
 
 .project-content h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
 .project-content p {
-  font-size: 15px;
+  font-size: 13px;
   color: #9ca3af;
-  margin-bottom: 15px;
-  line-height: 1.5;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  padding-right: 8px;
+}
+
+/* Hide scrollbar for description */
+.project-content p::-webkit-scrollbar {
+  display: none;
 }
 
 .tech-stack {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
 }
 
 .tech-stack span {
   background: rgba(6,182,212,0.15);
   color: #A5F3FC;
-  padding: 6px 12px;
+  padding: 4px 10px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .project-links {
   display: flex;
   gap: 15px;
+  flex-shrink: 0;
 }
 
 .project-links a {
@@ -800,12 +824,6 @@ body {
   font-weight: 500;
   line-height: 1.4;
 }
-  color: #A5F3FC;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-}
 
 /* Certifications Section */
 #certifications {
@@ -993,6 +1011,229 @@ body {
     opacity: 1;
   }
 }
+
+/* ================= SCROLL REVEAL ANIMATION ================= */
+/* Initial state: sections are hidden below with 0 opacity */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* When section has "show" class, reveal it with fade in and slide up */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================== */
+/* PRODUCTION-LEVEL ANIMATIONS */
+
+/* Staggered animation delay for child elements */
+section.show .skill-category,
+section.show .project-card,
+section.show .education-card,
+section.show .achievement-card,
+section.show .certification-card,
+section.show .stat-card {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section.show .skill-category:nth-child(1) { animation-delay: 0.1s; }
+section.show .skill-category:nth-child(2) { animation-delay: 0.2s; }
+section.show .skill-category:nth-child(3) { animation-delay: 0.3s; }
+section.show .skill-category:nth-child(4) { animation-delay: 0.4s; }
+section.show .skill-category:nth-child(5) { animation-delay: 0.5s; }
+section.show .skill-category:nth-child(6) { animation-delay: 0.6s; }
+section.show .skill-category:nth-child(7) { animation-delay: 0.7s; }
+
+section.show .project-card:nth-child(1) { animation-delay: 0.1s; }
+section.show .project-card:nth-child(2) { animation-delay: 0.2s; }
+section.show .project-card:nth-child(3) { animation-delay: 0.3s; }
+section.show .project-card:nth-child(4) { animation-delay: 0.4s; }
+section.show .project-card:nth-child(5) { animation-delay: 0.5s; }
+section.show .project-card:nth-child(6) { animation-delay: 0.6s; }
+
+section.show .stat-card:nth-child(1) { animation-delay: 0.1s; }
+section.show .stat-card:nth-child(2) { animation-delay: 0.2s; }
+section.show .stat-card:nth-child(3) { animation-delay: 0.3s; }
+section.show .stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+section.show .achievement-card:nth-child(1) { animation-delay: 0.1s; }
+section.show .achievement-card:nth-child(2) { animation-delay: 0.2s; }
+section.show .achievement-card:nth-child(3) { animation-delay: 0.3s; }
+section.show .achievement-card:nth-child(4) { animation-delay: 0.4s; }
+
+section.show .certification-card:nth-child(1) { animation-delay: 0.1s; }
+section.show .certification-card:nth-child(2) { animation-delay: 0.2s; }
+section.show .certification-card:nth-child(3) { animation-delay: 0.3s; }
+section.show .certification-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth card hover animation */
+.project-card,
+.skill-category,
+.education-card,
+.achievement-card,
+.certification-card,
+.stat-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover,
+.skill-category:hover,
+.education-card:hover,
+.achievement-card:hover,
+.certification-card:hover,
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.3);
+}
+
+/* Smooth button animations */
+.hero-text button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-text button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(239, 68, 68, 0.4);
+}
+
+.project-links a,
+.social-links a,
+.cv-view-btn,
+.cv-download-btn {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover,
+.social-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(6, 182, 212, 0.3);
+}
+
+/* Smooth transition for text elements */
+h1, h2, h3, h4, h5 {
+  transition: color 0.3s ease;
+}
+
+/* Icon animations */
+.category-title i,
+.education-column-title i,
+.achievement-icon-box,
+.cert-icon-box {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skill-category:hover .category-title i {
+  color: #22d3ee;
+  transform: scale(1.2) rotate(10deg);
+}
+
+.education-card:hover .education-column-title i {
+  color: #22d3ee;
+  transform: scale(1.2);
+}
+
+/* Pulse animation for achievements and certificates */
+.achievement-icon-box,
+.cert-icon-box {
+  position: relative;
+}
+
+.achievement-card:hover .achievement-icon-box,
+.certification-card:hover .cert-icon-box {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Smooth section title animation */
+.section-title {
+  transition: all 0.5s ease;
+}
+
+section.show .section-title {
+  animation: slideInDown 0.8s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth skill card color transition */
+.skill-card {
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.4);
+}
+
+/* Tech stack tag animation */
+.tech-stack span {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover .tech-stack span {
+  transform: scale(1.1);
+  background: rgba(6, 182, 212, 0.25);
+}
+
+/* Smooth input animations */
+.contact-form input,
+.contact-form textarea {
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.2);
+}
+
+/* Smooth loading state */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ============================================================== */
 
 /* CV Modal */
 .cv-modal {
@@ -1430,9 +1671,6 @@ body {
 
   .certification-card {
     padding: 20px;
-  }
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .cv-content {
